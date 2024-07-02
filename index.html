@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+</head>
+<body>
+  <script>
+
+		let number_game = Math.floor(Math.random() * 3)
+		function getComputerChoice () {
+
+			if (number_game = 1) {
+				return ('Rock')
+
+			} else if (number_game = 0) {
+				return ('Paper')
+
+			} else if (number_game = 2) {
+				return ('Scissors')
+
+			}
+
+		}
+ 
+		
+		let HumanChoice = prompt('Rock, Paper, Scissors, Shoot!');		
+
+		function getHumanChoice() {
+			let input = HumanChoice.toLowerCase()
+			return input.charAt(0).toUpperCase() + input.slice(1)
+	
+		}
+		
+		
+
+		function playRound() {
+			if (getHumanChoice() === getComputerChoice()) {
+				return ('Tie') }
+
+				//Computer Wins
+			else if (getComputerChoice() === 'Rock' && getHumanChoice() === 'Scissors'){
+			(getComputerChoice() === 'Scissors' && getHumanChoice() === 'Paper') || 
+			(getComputerChoice() === 'Paper' && getHumanChoice() === 'Rock')
+				return ('Computer wins!') }
+
+				//User Wins
+			if (getComputerChoice() === 'Scissors' && getHumanChoice() === 'Rock') 
+			(getComputerChoice() === 'Paper' && getHumanChoice() === 'Scissors') || 
+			(getComputerChoice() === 'Rock' && getHumanChoice() === 'Paper')
+				return ('Human wins!')
+			
+				
+		
+		}
+
+
+
+		function playGame(){
+			
+		}
+
+		console.log ('Comp: ' + getComputerChoice())
+		console.log ('Human: ' + getHumanChoice())
+		console.log (playRound())
+
+    
+  </script>
+</body>
+</html>
